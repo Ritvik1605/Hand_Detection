@@ -77,4 +77,7 @@ while True:
                 1, (255, 0, 0), 3)
 
     cv2.imshow("Img", img)
-    cv2.waitKey(1)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows()
